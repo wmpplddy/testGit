@@ -1,0 +1,113 @@
+drop database if exists his_main;
+create database his_main charset utf8;
+use his_main;
+-- 如下是管理员信息
+CREATE TABLE `t_user` (
+  `uid` bigint NOT NULL AUTO_INCREMENT,
+  `uname` varchar(64) DEFAULT NULL,
+  `upass` varchar(64) DEFAULT NULL,
+  `zjm` varchar(64) DEFAULT NULL,
+  `phone` varchar(11) DEFAULT NULL,
+  `mail` varchar(64) DEFAULT NULL,
+  `truename` varchar(16) DEFAULT NULL,
+  `sex` char(2) DEFAULT NULL,
+  `age` int DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `create_uid` bigint DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `update_uid` bigint DEFAULT NULL,
+  `delete_flag` int DEFAULT NULL,
+  `yl1` varchar(32) DEFAULT NULL,
+  `yl2` varchar(32) DEFAULT NULL,
+  `yl3` varchar(32) DEFAULT NULL,
+  `yl4` varchar(32) DEFAULT NULL,
+  PRIMARY KEY (`uid`)
+);
+INSERT INTO `t_user` VALUES (1,'张三1','202cb962ac59075b964b07152d234b70','zhangsan1','13613640261','373728741@qq.com','张三','男',17,'2021-10-28 15:25:26',NULL,'2021-11-01 14:38:36',1,1,NULL,NULL,NULL,NULL),(2,'张三2','123','zhangsan2','13613640262','373728742@qq.com','张三','男',18,'2021-10-28 15:25:26',1,'2021-10-28 16:29:30',1,2,NULL,NULL,NULL,NULL),(3,'张三3','123','zhangsan3','13613640263','373728743@qq.com','张三','男',19,'2021-10-28 15:25:27',1,'2021-10-28 16:29:30',1,2,NULL,NULL,NULL,NULL),(6,'张三4','202cb962ac59075b964b07152d234b70','zhangsan4','13613640222','373728765@qq.com','张三','女',22,'2021-10-28 17:07:16',1,'2021-10-28 17:23:21',1,1,NULL,NULL,NULL,NULL),(7,'李四1','202cb962ac59075b964b07152d234b70','lisi1','13112311111','abc_01@qq.com','李四','男',18,'2021-11-01 11:14:49',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(8,'李四2','202cb962ac59075b964b07152d234b70','lisi2','13112311112','abc_02@qq.com','李四','女',19,'2021-11-01 11:14:49',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(9,'李四3','202cb962ac59075b964b07152d234b70','lisi3','13112311113','abc_03@qq.com','李四','男',20,'2021-11-01 11:14:49',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(10,'李四4','202cb962ac59075b964b07152d234b70','lisi4','13112311114','abc_04@qq.com','李四','女',21,'2021-11-01 11:14:49',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(11,'李四5','202cb962ac59075b964b07152d234b70','lisi5','13112311115','abc_05@qq.com','李四','男',22,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(12,'李四6','202cb962ac59075b964b07152d234b70','lisi6','13112311116','abc_06@qq.com','李四','女',23,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(13,'李四7','202cb962ac59075b964b07152d234b70','lisi7','13112311117','abc_07@qq.com','李四','男',24,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(14,'李四8','202cb962ac59075b964b07152d234b70','lisi8','13112311118','abc_08@qq.com','李四','女',25,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(15,'李四9','202cb962ac59075b964b07152d234b70','lisi9','13112311119','abc_09@qq.com','李四','男',26,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(16,'李四10','202cb962ac59075b964b07152d234b70','lisi10','13112311120','abc_10@qq.com','李四','女',27,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(17,'李四11','202cb962ac59075b964b07152d234b70','lisi11','13112311121','abc_11@qq.com','李四','男',28,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(18,'李四12','202cb962ac59075b964b07152d234b70','lisi12','13112311122','abc_12@qq.com','李四','女',29,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(19,'李四13','202cb962ac59075b964b07152d234b70','lisi13','13112311123','abc_13@qq.com','李四','男',30,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(20,'李四14','202cb962ac59075b964b07152d234b70','lisi14','13112311124','abc_14@qq.com','李四','女',31,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(21,'李四15','202cb962ac59075b964b07152d234b70','lisi15','13112311125','abc_15@qq.com','李四','男',32,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(22,'李四16','202cb962ac59075b964b07152d234b70','lisi16','13112311126','abc_16@qq.com','李四','女',33,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(23,'李四17','202cb962ac59075b964b07152d234b70','lisi17','13112311127','abc_17@qq.com','李四','男',34,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(24,'李四18','202cb962ac59075b964b07152d234b70','lisi18','13112311128','abc_18@qq.com','李四','女',35,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(25,'李四19','202cb962ac59075b964b07152d234b70','lisi19','13112311129','@qq.com','李四','男',36,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(26,'李四20','202cb962ac59075b964b07152d234b70','lisi20','13112311130','abc_20@qq.com','李四','女',37,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(27,'李四21','202cb962ac59075b964b07152d234b70','lisi21','13112311131','abc_21@qq.com','李四','男',38,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(28,'李四22','202cb962ac59075b964b07152d234b70','lisi22','13112311132','@qq.com','李四','女',39,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(29,'李四23','202cb962ac59075b964b07152d234b70','lisi23','13112311133','abc_23@qq.com','李四','男',40,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(30,'李四24','202cb962ac59075b964b07152d234b70','lisi24','13112311134','abc_24@qq.com','李四','女',41,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(31,'李四25','202cb962ac59075b964b07152d234b70','lisi25','13112311135','abc_25@qq.com','李四','男',42,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(32,'李四26','202cb962ac59075b964b07152d234b70','lisi26','13112311136','abc@qq.com','李四','女',43,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(33,'李四27','202cb962ac59075b964b07152d234b70','lisi27','13112311137','q.com','李四','男',44,'2021-11-01 11:14:50',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(34,'李四28','202cb962ac59075b964b07152d234b70','lisi28','13112311138','.com','李四','女',45,'2021-11-01 11:14:51',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(35,'李四29','202cb962ac59075b964b07152d234b70','lisi29','13112311139','@qq.com','李四','男',46,'2021-11-01 11:14:51',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(36,'李四30','202cb962ac59075b964b07152d234b70','lisi30','13112311140','abc_30@qq.com','李四','女',47,'2021-11-01 11:14:51',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(37,'李四31','202cb962ac59075b964b07152d234b70','lisi31','13112311141','.com','李四','男',48,'2021-11-01 11:18:02',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(38,'李四32','202cb962ac59075b964b07152d234b70','lisi32','13112311142','abc_32@qq.com','李四','女',49,'2021-11-01 11:18:02',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(39,'李四33','202cb962ac59075b964b07152d234b70','lisi33','13112311143','abc_33@qq.com','李四','男',50,'2021-11-01 11:18:02',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(40,'李四34','202cb962ac59075b964b07152d234b70','lisi34','13112311144','abc_34@qq.com','李四','女',51,'2021-11-01 11:18:02',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(41,'李四35','202cb962ac59075b964b07152d234b70','lisi35','13112311145','abc_35@qq.com','李四','男',52,'2021-11-01 11:18:02',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(42,'李四36','202cb962ac59075b964b07152d234b70','lisi36','13112311146','abc_36@qq.com','李四','女',53,'2021-11-01 11:18:02',1,NULL,NULL,1,NULL,NULL,NULL,NULL),(43,'李四37','202cb962ac59075b964b07152d234b70','lisi37','13112311147','abc_37@qq.com','李四','男',54,'2021-11-01 11:18:02',1,NULL,NULL,1,NULL,NULL,NULL,NULL);
+update t_user set upass = md5('123') ;
+update t_user set mail = '19892380846@163.com';
+ CREATE TABLE `t_role` (
+  `rid` bigint NOT NULL AUTO_INCREMENT,
+  `rname` varchar(32) DEFAULT NULL,
+  `description` varchar(64) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `create_uid` bigint DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `update_uid` bigint DEFAULT NULL,
+  `delete_flag` int DEFAULT NULL,
+  `yl1` varchar(32) DEFAULT NULL,
+  `yl2` varchar(32) DEFAULT NULL,
+  PRIMARY KEY (`rid`)
+);
+
+INSERT INTO `t_role` VALUES
+(1,'院长','最牛了','2021-10-19 17:07:09',1,'2021-11-02 14:18:50',7,1,'1',NULL),
+(2,'副院长','也挺牛','2021-10-19 17:07:09',1,NULL,NULL,1,'1',NULL),
+(3,'行政主任','一般牛','2021-10-19 17:07:09',2,NULL,NULL,1,'1',NULL),
+(4,'科室主任','科室里面最最牛的','2021-11-01 17:15:59',1,'2021-11-01 17:24:56',7,2,'1',NULL),
+(6,'后勤主任','后勤老大','2021-11-02 14:10:50',7,'2021-11-02 14:18:16',7,2,'1',NULL),
+(7,'后勤','后勤员工','2021-11-02 14:11:25',7,'2021-11-02 14:18:16',7,2,'1',NULL),
+(8,'保卫科科长','保卫科老大','2021-11-02 14:11:25',7,'2021-11-09 11:31:01',1,2,'1',NULL),
+(9,'后勤管理员','111','2021-11-09 15:11:36',1,NULL,NULL,1,'2',NULL);
+
+CREATE TABLE `t_user_role` (
+  `uid` bigint NOT NULL,
+  `rid` bigint NOT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `create_uid` bigint DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `update_uid` bigint DEFAULT NULL,
+  PRIMARY KEY (`uid`,`rid`)
+);
+
+INSERT INTO `t_user_role` VALUES
+(1,1,now(),1,NULL,NULL),
+(2,2,now(),1,NULL,NULL),
+(12,3,now(),1,NULL,NULL);
+
+-- 科室表
+CREATE TABLE knit (
+    k_id INT primary key auto_increment,
+    kname VARCHAR(64),
+    loc VARCHAR(64),
+    kl1 VARCHAR(64),
+    kl2 VARCHAR(64)
+);
+
+
+-- 医生表
+CREATE TABLE doctor (
+    d_id INT AUTO_INCREMENT PRIMARY KEY,
+    dname VARCHAR(64) NOT NULL,
+    cardid VARCHAR(18) NOT NULL,
+		tel varchar(11),
+    age INT,
+    sex CHAR(2),
+    description VARCHAR(128),
+    `level` varchar(16),
+    create_time DATETIME default now(),
+    d_kid INT,
+    delete_flag INT DEFAULT 1,
+    dl1 VARCHAR(64),
+    dl2 VARCHAR(64)
+);
+
+INSERT INTO knit (kname, loc)
+VALUES('内科','医院A楼3层'),('外科','医院A楼4层'),('妇产科','医院B楼2层'),('儿科','医院C楼1层'),('眼科','医院D楼5层'),('耳鼻喉科','医院E楼3层'),('皮肤科','医院F楼2层'),('心血管内科','医院G楼1层'),('神经内科','医院H楼4层'),('内分泌科','医院I楼3层'),('消化内科','医院J楼2层'),('血液科','医院K楼1层'),('肾内科','医院L楼4层'),('泌尿外科','医院M楼3层'),('骨科','医院N楼2层'),('整形外科','医院O楼1层'),('胸外科','医院P楼5层'),('神经外科','医院Q楼3层'),('麻醉科','医院R楼2层'),('放射科','医院S楼1层');
+insert into doctor(dname,cardid,age,sex,description,`level`,d_kid)
+VALUES('allen','123456789012345678',25,'男','人称外国扁鹊，18年毕业美国精通内科，毕业于加利福尼亚大学，医学硕士，曾一晚救下30个人的性命，人称外国扁鹊。','主治医师',1),('王德','123456789012345322',25,'男','人称外国扁鹊，18年毕业美国精通内科，毕业于加利福尼亚大学，医学硕士，曾一晚救下30个人的性命，人称外国扁鹊。','主治医师',1),('艾伐姆','123456789012345122',25,'男','人称外国扁鹊，18年毕业美国精通内科，毕业于加利福尼亚大学，医学硕士，曾一晚救下30个人的性命，人称外国扁鹊。','主治医师',1),('钱忠','123456789012345382',25,'男','人称外国扁鹊，18年毕业美国精通内科，毕业于加利福尼亚大学，医学硕士，曾一晚救下30个人的性命，人称外国扁鹊。','主治医师',1),('钱李德','123456789012345918',35,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主任医师',2),('李逵','123456789012345823',26,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主任医师',2),('aka','123456789012345679',56,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主治医师',3),('策划刘','123456789012345679',35,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主任医师',3),('东风导','123456789012345679',44,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主任医师',4),('谢紫','123456789012345679',29,'女','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主任医师',5),('艾伦','123456789012345679',26,'女','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主治医师',6),('程兵','123456789012345679',26,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主任医师',7),('成广','123456789012345679',26,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主任医师',8),('刘汉','123456789012345679',26,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主任医师',9),('韩资','123456789012345679',26,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主治医师',10),('泡柳颜','123456789012345679',26,'女','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主任医师',11),('雷放','123456789012345679',26,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主任医师',12),('刘国汉','123456789012345679',26,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主任医师',13),('雷缺','123456789012345679',26,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主治医师',5),('李蝶','123456789012345679',26,'女','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主任医师',6),('李弗丹','123456789012345679',26,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','医师',7),('陈子丹','123456789012345679',26,'男','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','主任医师',8),('安娜','123456789012345679',31,'女','中国扁鹊，1999年留学日本精通外科，毕业于中南大学医学院，医学博士，曾一晚救下100个人的性命，人称当代扁鹊。','医师',9);
+update doctor set tel = '19974460979';
+-- 创建排班表
+-- 上午Morning   8:00 - 12:00
+-- 下午Afternoon 14:30 - 18:30
+CREATE TABLE schedule (
+    s_id INT AUTO_INCREMENT PRIMARY KEY,
+    d_id INT,
+    shift_date DATE,
+    shift_time VARCHAR(10) comment 'Morning|Afternoon'
+);
+insert into schedule(d_id,shift_date,shift_time)
+values(1,'2024-04-28','Morning'),(2,'2024-04-29','Afternoon'),(3,'2024-04-30','Afternoon'),(9,'2024-04-30','Morning'),(7,'2024-04-28','Morning');
+
+
+select * from `schedule` s left join doctor d on s.d_id = d.d_id left join knit k on d.d_kid = k.k_id where kname ='内科' and shift_date = '2024-04-29' and shift_time ='Afternoon';

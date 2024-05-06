@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jstl-impl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-j-8.0.31.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jaxen-1.1-beta-6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload-1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mybatis-3.5.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/hutool-all-5.8.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-io-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/javax.mail-1.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/pinyin4j-2.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/activation-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/fastjson-1.2.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/log4j-1.2.17.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
