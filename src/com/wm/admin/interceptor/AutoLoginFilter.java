@@ -21,7 +21,7 @@ public class AutoLoginFilter extends HttpFilter {
 
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse resp, FilterChain chain) throws IOException, ServletException {
-
+        
         if(AutoLoginUtil.isAutoLogin(req,resp)){
             req.getRequestDispatcher("/main.jsp").forward(req,resp);
             return;
